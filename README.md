@@ -2,6 +2,16 @@
 
 Publicly available subset of the IAHLT UD Hebrew Treebank's Wikipedia section (https://www.iahlt.org/)
 
+# Releases
+
+Releases with pretrained models are provided as squashfs images for technical
+reasons. To extract, install `squashfs-tools` and run e.g.:
+```
+unsquashfs UD_Hebrew-IAHLTwiki-r2.11.squashfs
+```
+
+The release will be placed in a folder `squashfs-root`.
+
 # Introduction
 
 The UD Hebrew-IAHLTWiki treebank consists of 5,000 contemporary Hebrew sentences representing a variety of texts originating from Wikipedia entries, compiled by the [Israeli Association of Human Language Technology](https://www.iahlt.org/). It includes various text domains, such as: biography, law, finance, health, places, events and miscellaneous. The schema for the UD Hebrew-IAHLT treebank, from which the publicly available UD Hebrew-IAHLTWiki subset is derived, is based on the conversion of the Hebrew Treebank (HTB) into the latest UD V2 and is checked against the Universal Dependencies validator as of UD release V2.10, in addition to a range of additional validations using the grewv tool.

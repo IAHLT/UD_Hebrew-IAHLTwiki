@@ -1,0 +1,52 @@
+# trankit model
+
+Included are scripts for training a model (and, for releases, pretrained
+models) for [trankit](https://github.com/nlp-uoregon/trankit). The model performs
+sentence segmentation, tokenization, lemmatization, and part-of-speech tagging,
+morphological analysis and dependency parsing.
+
+## How to get trankit
+
+`trankit` can be installed with `pip` for python3.8. Other versions may work,
+but we didn't test them.
+
+1. Set up a virtual environment:
+
+```
+virtualenv -p python3.8 trankit-py3.8
+```
+
+2. Activate the virtual environment:
+```
+source trankit-py3.8/bin/activate
+```
+
+3. Install trankit
+```
+pip install trankit
+```
+
+## How to train
+
+With the virtual environment activated, from the `models` directory, run:
+
+```
+python train.py he_iahltwiki-ud.trankit
+```
+
+Training may take some time!
+
+## How to parse
+
+For raw text, run:
+
+```
+python parse.py he_iahltwiki-ud.trankit TEXTFILE > CONLLUFILE
+```
+
+For sentences which are pre-segmented:
+
+```
+python parse.py --presegmented he_iahltwiki-ud.trankit SENTENCEFILE > CONLLUFILE
+```
+
